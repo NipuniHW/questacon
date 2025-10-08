@@ -37,8 +37,8 @@ if 'pepper' not in st.session_state:
     # port=39673
     # st.session_state.ip='10.0.0.244'
     # st.session_state.ip='172.16.35.227' # questacon ip
-    # st.session_state.ip='172.20.10.4'
-    st.session_state.ip='10.230.227.40'
+    st.session_state.ip='172.20.10.4'
+    # st.session_state.ip='10.230.227.40'
     port=9559
     st.session_state.session = st.session_state.pepper.connect(st.session_state.ip, port)
 
@@ -88,96 +88,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.subheader("Eyes")
-col1, col2, col3 = st.columns(3)
-with col1:
-    if st.button("Red"):
-        animation("eyes_red")
-
-with col2:
-    if st.button("Green"):
-        animation("eyes_green")
-
-with col3:
-    if st.button("Normal"):
-        animation("eyes")
-
-st.subheader("Dialog Animations")
-
-# Create two columns for the 7 buttons
-col1, col2 = st.columns(2)
-
-with col1:
-    if st.button("Space & time"):
-        animation("space_and_time")
-       #  st.success("Button pressed...")
-    if st.button("Self & others"):
-        animation("self_and_others")
-       #  st.success("Button pressed...")
-    if st.button("Affirmation"):
-        animation("affirmation")
-       #  st.success("Button pressed...")
-    if st.button("Negation"):
-        animation("negation")
-       #  st.success("Button pressed...")
-
-with col2:
-    if st.button("Question"):
-        animation("question")
-       #  st.success("Button pressed...")
-    if st.button("Exclamation"):
-        animation("exclamation")
-       #  st.success("Button pressed...")
-    if st.button("Enumeration"):
-        animation("enumeration")
-       #  st.success("Button pressed...")
-    if st.button("Facepalm"):
-        animation("facepalm")
-
-
-st.subheader("Moods")
-
-# Create two columns for the 9 buttons
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("<h3 style='text-align: center;'>Positive</h3>", unsafe_allow_html=True)
-    if st.button("Happy"):
-        animation("happy")
-       #  st.success("Button pressed...")
-    if st.button("Kisses"):
-        animation("kisses")
-       #  st.success("Button pressed...")
-    if st.button("Excited"):
-        animation("excited")
-       #  st.success("Button pressed...")
-    if st.button("Wave"):
-        animation('wave')
-
-with col2:
-    st.markdown("<h3 style='text-align: center;'>Neutral</h3>", unsafe_allow_html=True)
-    if st.button("Thinking"):
-        animation("thinking")
-       #  st.success("Button pressed...")
-    if st.button("Curious"):
-        animation("curious")
-       #  st.success("Button pressed...")
-    if st.button("Chill"):
-        animation("chill")
-       #  st.success("Button pressed...")
-
-with col3:
-    st.markdown("<h3 style='text-align: center;'>Negative</h3>", unsafe_allow_html=True)
-    if st.button("Fear"):
-        animation("fear")
-       #  st.success("Button pressed...")
-    if st.button("Confused"):
-        animation("confused")
-       #  st.success("Button pressed...")
-    if st.button("Bored"):
-        animation("bored")
-       #  st.success("Button pressed...")
-
 st.subheader("Pepper Speaking")
 
 col1, col2 = st.columns(2)
@@ -203,6 +113,105 @@ with col2:
     if st.button("Stop Speaking"):
         st.session_state.speaking=0
         animation("stand")
+
+st.subheader("Dialog Animations")
+
+# Create two columns for the 7 buttons
+col1, col2 = st.columns(2)
+
+with col1:
+    if st.button("Thinking"):
+        animation("thinking")
+       #  st.success("Button pressed...")
+    if st.button("Talk"):
+        animation("hello")
+    # if st.button("Conference"):
+    #     animation("invite")    
+       #  st.success("Button pressed...")
+    if st.button("Space & time"):
+        animation("space_and_time")
+       #  st.success("Button pressed...")
+    if st.button("Self & others"):
+        animation("self_and_others")
+       #  st.success("Button pressed...")
+    if st.button("Affirmation"):
+        animation("affirmation")
+       #  st.success("Button pressed...")
+    if st.button("Negation"):
+        animation("negation")
+       #  st.success("Button pressed...")
+
+with col2:
+    if st.button("Question"):
+        animation("question")
+       #  st.success("Button pressed...")
+    if st.button("Exclamation"):
+        animation("exclamation")
+       #  st.success("Button pressed...")
+    if st.button("Enumeration"):
+        animation("enumeration")
+       #  st.success("Button pressed...")
+    if st.button("Facepalm"):
+        animation("facepalm")
+    if st.button("Dance"):
+        animation("dance")
+    if st.button("Selfie Pose"):
+        animation("selfie")
+
+st.subheader("Eyes")
+col1, col2, col3 = st.columns(3)
+with col1:
+    if st.button("Red"):
+        animation("eyes_red")
+
+with col2:
+    if st.button("Green"):
+        animation("eyes_green")
+
+with col3:
+    if st.button("Normal"):
+        animation("eyes")
+
+st.subheader("Moods")
+
+# Create two columns for the 9 buttons
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("<h3 style='text-align: center;'>Positive</h3>", unsafe_allow_html=True)
+    if st.button("Happy"):
+        animation("happy")
+       #  st.success("Button pressed...")
+    if st.button("Kisses"):
+        animation("kisses")
+       #  st.success("Button pressed...")
+    if st.button("Excited"):
+        animation("excited")
+       #  st.success("Button pressed...")
+    if st.button("Wave"):
+        animation('wave')
+
+with col2:
+    st.markdown("<h3 style='text-align: center;'>Neutral</h3>", unsafe_allow_html=True)
+    if st.button("Curious"):
+        animation("curious")
+       #  st.success("Button pressed...")
+    if st.button("Chill"):
+        animation("chill")
+       #  st.success("Button pressed...")
+
+with col3:
+    st.markdown("<h3 style='text-align: center;'>Negative</h3>", unsafe_allow_html=True)
+    if st.button("Fear"):
+        animation("fear")
+       #  st.success("Button pressed...")
+    if st.button("Confused"):
+        animation("confused")
+       #  st.success("Button pressed...")
+    if st.button("Bored"):
+        animation("bored")
+       #  st.success("Button pressed...")
+
 
 st.subheader("Script")
 
